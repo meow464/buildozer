@@ -115,6 +115,7 @@ class TargetIos(Target):
         requirements = ''
         for r in config['options']['install_requires']:
             requirements += f' "{r}"'
+
         self.buildozer.cmd(f'pip install {options} {requirements}')
 
     def install_platform(self):
